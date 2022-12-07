@@ -2,8 +2,8 @@
 #include <image_transport/image_transport.h>
 #include <opencv2/highgui/highgui.hpp>
 #include <cv_bridge/cv_bridge.h>
-#include "/home/vm/catkin_ws/src/Treiber Seek/libseek-thermal/src/seek.h"
-#include "/home/vm/catkin_ws/src/Treiber Seek/libseek-thermal/src/SeekCam.h"
+#include "/home/pi/catkin_ws/src/Treiber_Seek/libseek-thermal/src/seek.h"
+#include "/home/pi/catkin_ws/src/Treiber_Seek/libseek-thermal/src/SeekCam.h"
 
 #include <iostream>
 #include <string>
@@ -46,7 +46,7 @@ int main(int argc, char** argv)
     //image_transport::Publisher pub_r_rainbow = it.advertise("seek/right/image_rainbow", 1);
 
     // Create a SeekThermalPro camera
-    LibSeek::SeekThermalPro seek_l("/home/vm/catkin_ws/src/dynamics_seek_thermal/config/seekpro_ffc_left.png", 0);
+    LibSeek::SeekThermalPro seek_l("/home/pi/catkin_ws/src/dynamics_seek_thermal/config/seekpro_ffc_left.png", 0);
     if(!seek_l.open()) {
         ROS_ERROR("Unable to open SEEK Compact Pro camera");
         return -1;
